@@ -72,11 +72,11 @@ After placing the scripts, reload them with:
 
 ## Contributing
 
-We welcome contributions! If  have a Skript script 'd like to add or an improvement to suggest:
+We welcome contributions! If you have a Skript script you'd like to add or an improvement to suggest:
 
 1. Fork this repository.
 2. Create a new branch (`git checkout -b feature/new-script`).
-3. Add r script or make changes.
+3. Add your script or make changes.
 4. Submit a pull request with a clear description of r contribution.
 
 Please ensure your scripts are tested in the specified environment (PaperMC 1.21.4, Skript 2.10.2) and include proper documentation.
