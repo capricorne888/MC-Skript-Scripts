@@ -27,9 +27,7 @@ All scripts in this repository have been tested and confirmed to work correctly 
 
 Below is a list of the scripts included in this repository (to be updated as you add scripts):
 
-- **[Script Name 1]**: Brief description of what this script does (e.g., "Adds a custom economy system with player shops").
-- **[Script Name 2]**: Brief description (e.g., "Implements a daily reward system with streak bonuses").
-- **[Script Name 3]**: Brief description (e.g., "Creates a custom boss fight with unique abilities").
+- **[Script Name 1]**: More scripts to be added").
 - *More scripts to be added as you develop them!*
 
 *Note*: Check the individual script files in the repository for detailed usage instructions and configuration options.
