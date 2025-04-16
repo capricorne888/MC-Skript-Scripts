@@ -1,0 +1,12 @@
+# Anyone with the permission skript.nightvision can use /nv to toggle on/off the nightvision
+command /nv:
+  permission: skript.nightvision
+  trigger:
+    if {nv::%player%} is not set:
+      apply night vision to player for 999999 seconds
+      set {nv::%player%} to true
+      send "&aNight vision enabled!"
+    else:
+      remove night vision from player
+      delete {nv::%player%}
+      send "&cNight vision disabled!"
