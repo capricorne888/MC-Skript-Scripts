@@ -25,7 +25,7 @@ All scripts in this repository have been tested and confirmed to work correctly 
 
 ## Available Scripts
 
-Below is a list of the scripts included in this repository (to be updated as you add scripts):
+Below is a list of the scripts included in this repository (to be updated as I add scripts):
 
 - **[NightVision]**: This simple script allow users with the permission to activate the night vision with a simple command.
 - **[Console]**: This simple script allow server owner to send colorful message from the console.
@@ -72,12 +72,12 @@ After placing the scripts, reload them with:
 
 ## Contributing
 
-We welcome contributions! If you have a Skript script you'd like to add or an improvement to suggest:
+We welcome contributions! If  have a Skript script 'd like to add or an improvement to suggest:
 
 1. Fork this repository.
 2. Create a new branch (`git checkout -b feature/new-script`).
-3. Add your script or make changes.
-4. Submit a pull request with a clear description of your contribution.
+3. Add r script or make changes.
+4. Submit a pull request with a clear description of r contribution.
 
 Please ensure your scripts are tested in the specified environment (PaperMC 1.21.4, Skript 2.10.2) and include proper documentation.
 
