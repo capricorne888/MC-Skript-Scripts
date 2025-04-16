@@ -1,0 +1,7 @@
+# This script allow you to change the console text colors Name and Messages
+on command "/say":
+  if executor is console:
+    cancel event
+    set {_msg} to full command
+    set {_msg} to subtext of {_msg} from character 5 to character length of {_msg}
+    broadcast "&c[console]: &a%{_msg}%"
