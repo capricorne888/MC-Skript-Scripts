@@ -1,0 +1,53 @@
+command /voteweather <text>:
+    usage: /voteweather <sun/rain>
+    trigger:
+        if {vote::weather} is not set:
+            set {vote::weather} to arg-1
+            set {vote::count} to 1
+            # Check if the executor is console or a player
+            if player is not set:
+                set {vote::starter} to "[Console]"
+                set {vote::voters::console} to true  # Track console separately
+            else:
+                set {vote::starter} to "%player%"
+                set {vote::voters::%player's uuid%} to true  # Track player's vote
+            broadcast "&e%{vote::starter}% started a vote for %arg-1%! Type /yes to vote! (30 seconds remaining)"
+            
+            # Start a loop to check votes and wait up to 30 seconds
+            loop 30 times:
+                wait 1 second
+                set {_totalPlayers} to number of all players  # Recalculate each second
+                set {_votedPlayers} to size of {vote::voters::*}  # Total voters (including console if it voted)
+                if {vote::voters::console} is set:  # If console voted, subtract 1
+                    subtract 1 from {_votedPlayers}
+                if {_votedPlayers} >= {_totalPlayers}:
+                    exit loop  # End early if all players have voted
+            set {_totalPlayers} to number of all players
+            set {_requiredVotes} to {_totalPlayers} * 0.6
+            if {vote::count} >= {_requiredVotes}:
+                if arg-1 is "sun":
+                    set weather to clear
+                    broadcast "&aWeather set to sun by vote! (%{vote::count}%/%{_totalPlayers}%)"
+                else if arg-1 is "rain":
+                    set weather to rain
+                    broadcast "&aWeather set to rain by vote! (%{vote::count}%/%{_totalPlayers}%)"
+            else:
+                broadcast "&cVote for %arg-1% failed - not enough votes in 30 seconds. (%{vote::count}%/%{_requiredVotes}% needed out of %{_totalPlayers}%)"
+            delete {vote::weather}
+            delete {vote::count}
+            delete {vote::voters::*}
+            delete {vote::starter}
+        else:
+            send "&cA vote is already active!"
+
+command /yes:
+    trigger:
+        if {vote::weather} is set:
+            if {vote::voters::%player's uuid%} is not set:
+                add 1 to {vote::count}
+                set {vote::voters::%player's uuid%} to true
+                send "&aYou voted yes!" to player
+            else:
+                send "&cYou already voted!" to player
+        else:
+            send "&cThere’s no active vote!"
