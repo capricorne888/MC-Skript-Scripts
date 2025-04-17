@@ -1,6 +1,6 @@
-# MC-Skript-Scripts
+# Minecraft Skript Scripts
 
-Welcome to **MC-Skript-Scripts**, a collection of custom Skript scripts designed for the Skript plugin on Minecraft servers. These scripts enhance your PaperMC server with unique features, mechanics, and utilities, all crafted to enrich gameplay and server management.
+Welcome to **Minecraft Skript Scripts**, a collection of custom Skript scripts designed for the Skript plugin on Minecraft servers. These scripts enhance your PaperMC server with unique features, mechanics, and utilities, all crafted to enrich gameplay and server management.
 
 <p align="center">
   <img src="http://checkthese.com/img/IMG_0160.PNG?3" alt="Capricorne888" width="200" height="200">
