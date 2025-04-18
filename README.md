@@ -27,8 +27,8 @@ All scripts in this repository have been tested and confirmed to work correctly 
 
 Below is a list of the scripts included in this repository (to be updated as I add scripts):
 
-- **[NightVision]**: This simple script allow users with the permission to activate the night vision with a simple command.
 - **[Console]**: This simple script allow server owner to send colorful messages from the console.
+- **[NightVision]**: This simple script allow users with the permission to activate the night vision with a simple command.
 - **[VoteWeather]**: This simple script allow users to vote for sun or rain.
 - *More scripts to be added as I develop them!*
 
